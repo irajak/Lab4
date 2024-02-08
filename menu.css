@@ -43,7 +43,7 @@
     }
 
     .menu ul {
-        flex-direction: row; /* Set flex direction to row for horizontal layout */
+        flex-direction: row; 
     }
 
     .main .row .small,
@@ -55,13 +55,6 @@
 
     .main {
         margin-left: 0; /* Default margin */
-    }
-}
-
-
-@media screen and (min-width: 769px) {
-    .menu ul {
-        flex-direction: column; 
     }
 }
 
