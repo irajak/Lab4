@@ -32,6 +32,12 @@
 }
 
 @media screen and (max-width: 768px) {
+    .main {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .menu {
         width: 100%; /* Set width to 100% for horizontal layout */
     }
@@ -40,20 +46,41 @@
         flex-direction: row; /* Set flex direction to row for horizontal layout */
     }
 
-    .main .row .medium,
-    .main .row .small {
-        margin-right: 20px; /* Add margin between the items */
+    .main .row .small,
+    .main .row .medium {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+        float: left; 
     }
-    
+
     .main {
-        margin-left: 20px; /* Default margin */
+        margin-left: 0; /* Default margin */
     }
 }
 
-/* Media query for screens up to 480px */
-@media screen and (max-width: 480px) {
-    .main .row .medium,
-    .main .row .small {
-        margin-right: 0; /* Remove margin */
+
+@media screen and (min-width: 769px) {
+    .menu ul {
+        flex-direction: column; 
     }
 }
+
+
+@media screen and (min-width: 481px) {
+    .main .row .small,
+    .main .row .medium {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+        float: left; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main .row .small,
+    .main .row .medium {
+        width: 100%; 
+        margin-bottom: 20px; 
+        float: none; 
+    }
+}
+
