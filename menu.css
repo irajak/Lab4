@@ -8,6 +8,8 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column; 
 }
 
 .menu ul li {
@@ -27,4 +29,31 @@
     content: "";
     display: table;
     clear: both;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        width: 100%; /* Set width to 100% for horizontal layout */
+    }
+
+    .menu ul {
+        flex-direction: row; /* Set flex direction to row for horizontal layout */
+    }
+
+    .main .row .medium,
+    .main .row .small {
+        margin-right: 20px; /* Add margin between the items */
+    }
+    
+    .main {
+        margin-left: 20px; /* Default margin */
+    }
+}
+
+/* Media query for screens up to 480px */
+@media screen and (max-width: 480px) {
+    .main .row .medium,
+    .main .row .small {
+        margin-right: 0; /* Remove margin */
+    }
 }
